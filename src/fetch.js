@@ -23,8 +23,9 @@ export function fetchData(location){
 
 export async function processData(location){
   try {
-    
+    let data = fetchData(location);
+    return data;
   } catch (error) {
-    
+    console.log(`Error:  ${error}`);
   }
 }
