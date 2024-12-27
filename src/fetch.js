@@ -1,4 +1,4 @@
-export function retrieveData(location){
+export function fetchData(location){
     return new Promise((resolve, reject) =>{
       fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?unitGroup=us&key=PBCAQN2E5DGNC4CEYYD2KR2V8&contentType=json`, {
         "method": "GET",
