@@ -41,16 +41,77 @@ body{
     flex-direction: column;
 }
 
-.header, .footer, .search-bar{
-    background-color: var(--light-grey);
-}
-
 .content{
     height: calc(100vh - 275px);
-    background-color: grey;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 1rem;
 }
 
+.main-block{
+    width: 500px;
+    border-radius: 16px;
+    background-color: rgb(44, 44, 44);
+}
 
+.main-name h1, .main-temp h1{
+    font-size: 4rem;
+}
+
+#location-name, #date-txt, #description-txt, #forecast-txt{
+    text-align: center;
+}
+
+#weather-icon{
+    height: 150px;
+}
+
+#weather-icon img{
+    width: 250px;
+}
+
+.second-block{
+    border: 0px solid red;
+}
+
+.main-block, .second-block{
+    margin: 1rem 3rem 3rem;
+}
+
+.air, .future-forecast{
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+    padding: 1rem;
+    background-color: rgb(44, 44, 44);
+}
+
+.air h1, .future-forecast h1{
+    margin-top: 0px;
+}
+
+.air-children{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.air-children div{
+    width: 25%;
+    padding: 1rem;
+}
+
+#humidity p, #wind-gust p, #wind-speed p, #wind-direction p{
+    margin: 8px 0 0 0;
+}
+
+.forecast-children{
+    display: flex;
+    gap: 2rem;
+}
+
+.forecast-children div{
+    width: calc(100%/7);
+}
 
 .search-container{
     display: flex;
@@ -70,4 +131,34 @@ body{
     border-radius: 100%;
     border: none;
     background-color: rgba(255, 255, 255, 0);
+    cursor:pointer;
+}
+
+.footer{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.footer p{
+    margin-right: 3rem;
+    margin: 0 3rem 0 0;
+}
+
+.no-margin-bot{
+    margin-bottom: 0;
+}
+
+.no-margin-top{
+    margin-top: 0;
+}
+
+.child{
+    background-color: var(--light-grey);
+    border-radius: 16px;
+}
+
+.light-grey{
+    background-color: var(--light-grey);
 }
