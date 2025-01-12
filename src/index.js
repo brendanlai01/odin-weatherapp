@@ -11,4 +11,5 @@ function addListeners(){
     });
 }
 
+fetchData('Los Angeles');
 addListeners();
