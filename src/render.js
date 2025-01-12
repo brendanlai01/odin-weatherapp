@@ -62,6 +62,56 @@ export function loading(){
     main.innerHTML = '<div class="loader center-align"></div>';
 }
 
+export function restoreAppSkeleton(){
+    let main = document.querySelector('main');
+
+    main.innerHTML = `
+        <div class="main-block center-align">
+            <div class="main-name center-align">
+                <h1 class="no-margin-bot" id="location-name"></h1>
+                <h2 class="no-margin-top" id="date-txt"></h2>
+            </div>
+            <i id="weather-icon">
+                <img src="" alt="">
+            </i>
+            <div class="main-temp center-align">
+                <h1 class="no-margin-bot" id="temperature-txt"></h1>
+                <h2 class="no-margin-top" id="forecast-txt"></h2>
+                <i id="description-txt"></i>
+            </div>
+        </div>
+        <div class="second-block">
+            <div class="air">
+                <h1>Air Conditions</h1>
+                <div class="air-children">
+                    <div id="humidity" class="child">
+                        <b>Humidity</b>
+                        <p id="humidity-txt"></p>
+                    </div>
+                    <div id="wind-gust" class="child">
+                        <b>Wind Gust</b>
+                        <p id="gust-txt"></p>
+                    </div>
+                    <div id="wind-speed" class="child">
+                        <b>Wind Speed</b>
+                        <p id="speed-txt"></p>
+                    </div>
+                    <div id="wind-direction" class="child">
+                        <b>Wind Direction</b>
+                        <p id="direction-txt"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="future-forecast">
+                <h1>7-Day Forecast</h1>
+                <div class="forecast-children">
+                </div>
+            </div>
+        </div>
+        `;
+
+}
+
 function createChild(data, index){
     let forecast = document.querySelector('.forecast-children');
     let newDiv = document.createElement('div');
@@ -120,3 +170,5 @@ function determineForecastIcon(data, index){
         return windy;
     }
 }
+
+
