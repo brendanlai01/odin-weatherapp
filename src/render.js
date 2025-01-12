@@ -13,6 +13,9 @@ export function renderMain(data){
     let temperature = document.querySelector('#temperature-txt');
     let forecast = document.querySelector('#forecast-txt');
     let description = document.querySelector('#description-txt');
+    let search = document.querySelector('#search-input');
+
+    search.style.borderColor = '#e0e0e0';
 
     location.textContent = '';
     date.textContent = '';
@@ -52,6 +55,13 @@ export function renderForecast(data){
     for(let i = 2; i < 9; i++){
         createChild(data, i);
     }
+}
+
+export function showError(){
+    let search = document.querySelector('#search-input');
+
+    search.style.borderColor = 'red';
+    alert('Enter a valid location!')
 }
 
 export function loading(){

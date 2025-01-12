@@ -1,4 +1,4 @@
-import { loading, renderConditions, renderForecast, renderMain, restoreAppSkeleton } from "./render";
+import { loading, renderConditions, renderForecast, renderMain, restoreAppSkeleton, showError } from "./render";
 
 export async function fetchData(location){
     return new Promise((resolve, reject) =>{
@@ -23,6 +23,7 @@ export async function fetchData(location){
         console.log(data.humidity);
       })
       .catch((err) => {
+        showError();
         reject(`Error: Data fetch failed - ${err.message}`);
         console.error(err);
       });
