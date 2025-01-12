@@ -53,6 +53,15 @@ export function renderForecast(data){
         createChild(data, i);
     }
 }
+
+export function loading(){
+    let main = document.querySelector('main');
+    const loadingDiv = document.createElement('div');
+
+    loadingDiv.class = 'loader';
+    main.innerHTML = '<div class="loader center-align"></div>';
+}
+
 function createChild(data, index){
     let forecast = document.querySelector('.forecast-children');
     let newDiv = document.createElement('div');
