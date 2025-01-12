@@ -14,8 +14,8 @@ export async function fetchData(location){
       })
       .then((data) => {
         restoreAppSkeleton();
-        renderConditions(data);
         renderMain(data);
+        renderConditions(data);
         renderForecast(data);
         resolve(data);
         console.log(data);
