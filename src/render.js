@@ -162,15 +162,13 @@ function determineWeatherIcon(data){
 }
 
 function determineForecastIcon(data, index){
-    let condition = data.days[index].conditions;
+    let condition = data.days[index].icon;
 
-    if(condition.includes('Clear')){
+    if(condition.includes('clear')){
         return sunny;
-    }else if(condition.includes('Rain') && condition.includes('Snow')){
-        return rainandsnow;
-    }else if(condition.includes('Rain')){
+    }else if(condition.includes('rain')){
         return rainy;
-    }else if(condition.includes('Snow')){
+    }else if(condition.includes('snow')){
         return snowy;
     }else if(condition.includes('cloudy')){
         return cloudy;
