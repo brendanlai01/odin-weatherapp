@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="609a232ab53e413e38d2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="header light-grey  center-align">
+        <h1 class="logo">Another Weather App</h1>
+    </div>
+    <div class="search-bar light-grey  center-align">
+        <div class="search-container">
+            <input type="text" id="search-input" class="roboto-regular" placeholder="Enter location">
+            <button id="search-btn" class="white"></button>
+        </div>
+    </div>
+    <main class="content light-grey ">
+        <div class="main-block center-align">
+            <div class="main-name center-align">
+                <h1 class="no-margin-bot" id="location-name"></h1>
+                <h2 class="no-margin-top" id="date-txt"></h2>
+            </div>
+            <i id="weather-icon">
+                <img alt="">
+            </i>
+            <div class="main-temp center-align">
+                <h1 class="no-margin-bot" id="temperature-txt"></h1>
+                <h2 class="no-margin-top" id="forecast-txt"></h2>
+                <i id="description-txt"></i>
+            </div>
+        </div>
+        <div class="second-block">
+            <div class="air">
+                <h1>Air Conditions</h1>
+                <div class="air-children">
+                    <div id="humidity" class="child">
+                        <b>Humidity</b>
+                        <p id="humidity-txt"></p>
+                    </div>
+                    <div id="wind-gust" class="child">
+                        <b>Wind Gust</b>
+                        <p id="gust-txt"></p>
+                    </div>
+                    <div id="wind-speed" class="child">
+                        <b>Wind Speed</b>
+                        <p id="speed-txt"></p>
+                    </div>
+                    <div id="wind-direction" class="child">
+                        <b>Wind Direction</b>
+                        <p id="direction-txt"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="future-forecast">
+                <h1>7-Day Forecast</h1>
+                <div class="forecast-children">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer light-grey">
+        <p>Created by Brendan Lai</p>
+        <p>Github: <a href="https://github.com/brendanlai01">brendanlai01</a></p>
+    </footer>
+</body>
+</html>
